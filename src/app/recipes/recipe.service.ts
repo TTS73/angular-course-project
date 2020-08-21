@@ -26,13 +26,13 @@ export class RecipeService {
       ])
   ];
 
-  constructor(private shoppinLsiSercive: ShoppingListService) {}
+  constructor(private shoppinListSercive: ShoppingListService) {}
 
   getRecipes() {
     return this.recipes.slice();
   }
 
   addIngredientToShoppingList(ingredients: Ingredient[]) {
-
+    this.shoppinListSercive.addIngredients(ingredients);
   }
 }
